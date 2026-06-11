@@ -64,8 +64,6 @@ def main(cli_task: str, action=''):
                 print("This task is unfinished. No need to mark as one.")
                 return
 
-            task.date_finished = date.today()
-
             print("MARKED AS UNFINISHED SUCCESSFULLY!" if task_repository.mark_unfinished(task) else "UNEXPECTED ERROR OCCURRED.")
 
         case 'see-all':
