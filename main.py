@@ -70,13 +70,23 @@ def main(cli_task: str, action=''):
 
         case 'see-all':
             inc = 0
-            for task in task_repository.tasks_json:
+            tasks = task_repository.tasks_json
+
+            if len(tasks) == 0:
+                print("You haven't added any tasks yet. Add now!")
+            
+            for task in tasks:
                 inc+=1
                 print(f"{inc}. Task ID: {task["ID"]} | Task: {task["Task"]} | Date added: {task["Date added"]} | Date finished: {task["Date finished"]} | Status: {task["Status"]}")
 
         case 'see-fin':
             inc = 0
-            for task in task_repository.tasks_json:
+            tasks = task_repository.tasks_json
+
+            if len(tasks) == 0:
+                print("You haven't added any tasks yet. Add now!")
+            
+            for task in tasks:
                 if task["Date finished"] != "Not yet finished.":
                     inc+=1
 
@@ -84,7 +94,12 @@ def main(cli_task: str, action=''):
 
         case 'see-uf':
             inc = 0
-            for task in task_repository.tasks_json:
+            tasks = task_repository.tasks_json
+
+            if len(tasks) == 0:
+                print("You haven't added any tasks yet. Add now!")
+            
+            for task in tasks:
                 inc+=1
 
                 if task["Date finished"] == "Not yet finished.":
