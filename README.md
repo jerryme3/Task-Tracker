@@ -7,8 +7,8 @@ A Python CLI-based Application that tracks users' tasks!
 - Mark tasks as finished
 - Mark tasks as unfinished
 - See all tasks
-- See unfinished tasks only
-- See finished tasks only
+- See unfinished tasks
+- See finished tasks
 - See lists of commands
 
 ## COMMANDS
