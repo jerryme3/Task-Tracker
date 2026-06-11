@@ -60,7 +60,7 @@ def main(cli_task: str, action=''):
                 print("Task ID does not exists.")
                 return
             
-            if task.date_finished == "Not finished yet.":
+            if task.date_finished == "Not yet finished.":
                 print("This task is unfinished. No need to mark as one.")
                 return
 
