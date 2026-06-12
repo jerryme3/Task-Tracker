@@ -105,7 +105,7 @@ def main(cli_task: str, action=''):
         
         case 'del':
             if str(action).isspace() or len(action) == 0:
-                print("Task ID to be marked as unfinished is expected, but none was passed.")
+                print("Task ID to be deleted is expected, but none was passed.")
                 return
             
             if not str(action).isdigit():
